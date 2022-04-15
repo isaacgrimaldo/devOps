@@ -3,19 +3,19 @@
 
 ## Comandos Principales
 
-- Inicio del clouster 
+- Inicio del cluster 
 
 `
  $ minikube start 
 `
 
-- Ver el status del  clouster 
+- Ver el status del  cluster 
 
 `
  $ minikube status
 `
 
-- Detener el clouster 
+- Detener el cluster 
 
 `
  $ minikube stop
@@ -33,6 +33,19 @@
  $ minikube service [target]
 `
 
+- Mostrar la ip de la maquina
+
+`
+ $ minikube ip
+`
+
+- Exponer un servicio que el firewall no deja ver (windows)
+
+`
+ $ minikube server [server-name]
+`
+
+
 ## Kubectl
 
 -  Ver la version de la api 
@@ -41,6 +54,29 @@
  $  kubectl api-versions
 `
 
+- Aplicar archivos .yalm
+
+`
+ $ kubectl apply -f [FileName.yalm]
+`
+
+- Ver todo los desplegado
+
+`
+ $ kubectl  get all
+`
+
+- Borrar todos lo que esta dentro de una carpeta 
+
+`
+ $ kubectl delete  -f ./
+`
+
+- Desplegado todos lo que esta dentro de una carpeta 
+
+`
+ $ kubectl delete  -f ./
+`
 
 ### PODS
 
@@ -59,27 +95,27 @@
 - Borrar un pod
 
 `
- $ kubectl delte pod [target]
+ $ kubectl delete pod [target]
 `
 
 
-- Ver informacion de un pods en especifico 
+- Ver información de un pods en especifico 
 
 `
  $ kubectl  describe pod [target]
 `
 
-- Exponer el pod fuera del Clúster: 
+- Exponer el pod fuera del Cluster: 
     - Esto crea un servicio  
 
 `
- $ kubectl expose pod  app type=loadBalancer --port=[puerto-exposicion] --target-port=[default]
+ $ kubectl expose pod  app type=loadBalancer --port=[puerto-exposición] --target-port=[default]
 `
  
 
 ### Service 
 
-- Optener los servicios 
+- Obtener los servicios 
 
 `
  $ kubectl get service 
